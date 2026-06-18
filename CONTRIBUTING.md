@@ -1,6 +1,6 @@
 # Contributing
 
-Thank you for your interest in contributing to `@krizad/thai-financial-holiday`!
+Thank you for your interest in contributing to `@krizad/thai-financial-holiday-helper`!
 
 ## Development Setup
 
@@ -28,7 +28,7 @@ Thank you for your interest in contributing to `@krizad/thai-financial-holiday`!
 
 ## Reporting Issues
 
-Please use [GitHub Issues](https://github.com/KriZad/thai-financial-holiday/issues) to report bugs or request features.
+Please use [GitHub Issues](https://github.com/krizad/thai-financial-holiday-helper-package/issues) to report bugs or request features.
 
 ## License
 

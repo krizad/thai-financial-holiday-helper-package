@@ -1,6 +1,6 @@
-# @krizad/thai-financial-holiday
+# @krizad/thai-financial-holiday-helper
 
-[![npm version](https://img.shields.io/npm/v/@krizad/thai-financial-holiday.svg)](https://www.npmjs.com/package/@krizad/thai-financial-holiday)
+[![npm version](https://img.shields.io/npm/v/@krizad/thai-financial-holiday-helper.svg)](https://www.npmjs.com/package/@krizad/thai-financial-holiday-helper)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Interactive Demo](https://img.shields.io/badge/demo-interactive-brightgreen.svg)](https://krizad.github.io/thai-financial-holiday-demo/)
 
@@ -24,13 +24,13 @@
 
 ```bash
 # npm
-npm install @krizad/thai-financial-holiday
+npm install @krizad/thai-financial-holiday-helper
 
 # pnpm
-pnpm add @krizad/thai-financial-holiday
+pnpm add @krizad/thai-financial-holiday-helper
 
 # yarn
-yarn add @krizad/thai-financial-holiday
+yarn add @krizad/thai-financial-holiday-helper
 ```
 
 ---
@@ -44,7 +44,7 @@ yarn add @krizad/thai-financial-holiday
 ใช้เพื่อตรวจสอบวันหยุดโดยการรับข้อมูลประเภท `Date`, `string` (รูปแบบ YYYY-MM-DD หรือ ISO string ก็ได้) หรือ `number` (Timestamp)
 
 ```typescript
-import { isHoliday } from '@krizad/thai-financial-holiday';
+import { isHoliday } from '@krizad/thai-financial-holiday-helper';
 
 // ตรวจสอบจาก String YYYY-MM-DD
 console.log(isHoliday('2026-01-01')); // true (วันขึ้นปีใหม่)
@@ -62,7 +62,7 @@ if (isHoliday(today)) {
 ดึงข้อมูลวันหยุดทั้งหมด หรือระบุปีที่ต้องการเจาะจง (`number`) และสามารถเลือกกรองเฉพาะบางเดือนได้ (`number` ตั้งแต่ 1-12)
 
 ```typescript
-import { getHolidays } from '@krizad/thai-financial-holiday';
+import { getHolidays } from '@krizad/thai-financial-holiday-helper';
 
 // ดึงวันหยุดทั้งหมดในฐานข้อมูล (ย้อนหลัง 5 ปี)
 const allHolidays = getHolidays();
@@ -95,7 +95,7 @@ Output:
 หาวันหยุดถัดไปนับตั้งแต่วันที่กำหนด (หากไม่กำหนด จะนับจากเวลาปัจจุบัน)
 
 ```typescript
-import { getNextHoliday } from '@krizad/thai-financial-holiday';
+import { getNextHoliday } from '@krizad/thai-financial-holiday-helper';
 
 // ค้นหาวันหยุดถัดไปนับจากวันที่ 31 ธันวาคม 2025
 const next = getNextHoliday('2025-12-31');
@@ -110,7 +110,7 @@ if (next) {
 ดึงรายการวันหยุดระหว่างช่วงวันที่เริ่มต้นและสิ้นสุด (แบบครอบคลุม/Inclusive)
 
 ```typescript
-import { getHolidaysInRange } from '@krizad/thai-financial-holiday';
+import { getHolidaysInRange } from '@krizad/thai-financial-holiday-helper';
 
 // ดึงวันหยุดในช่วงเทศกาลปีใหม่ 2026
 const holidays = getHolidaysInRange('2026-01-01', '2026-01-05');
@@ -129,7 +129,7 @@ Output:
 ค้นหารายละเอียดวันหยุดของวันที่กำหนด (ส่งกลับเป็น Object ข้อมูลวันหยุด หรือ `null` หากไม่ใช่วันหยุด)
 
 ```typescript
-import { getHoliday } from '@krizad/thai-financial-holiday';
+import { getHoliday } from '@krizad/thai-financial-holiday-helper';
 
 const holiday = getHoliday('2026-01-01');
 if (holiday) {
@@ -143,7 +143,7 @@ if (holiday) {
 ฟังก์ชันช่วยคำนวณและตรวจสอบวันทำการสถาบันการเงิน (ข้ามเสาร์-อาทิตย์ และวันหยุด ธปท.)
 
 ```typescript
-import { isBusinessDay, addBusinessDays, getBusinessDaysInRange } from '@krizad/thai-financial-holiday';
+import { isBusinessDay, addBusinessDays, getBusinessDaysInRange } from '@krizad/thai-financial-holiday-helper';
 
 // 6.1 ตรวจสอบวันทำการปกติ (isBusinessDay)
 console.log(isBusinessDay('2026-01-01')); // false (วันหยุดขึ้นปีใหม่)
