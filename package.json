@@ -1,5 +1,5 @@
 {
-  "name": "thai-financial-holiday",
+  "name": "@krizad/thai-financial-holiday",
   "version": "1.0.0",
   "description": "Thai Financial Institution Holidays synced from Bank of Thailand API",
   "main": "./dist/index.js",
@@ -39,6 +39,9 @@
     "url": "https://github.com/KriZad/thai-financial-holiday/issues"
   },
   "homepage": "https://github.com/KriZad/thai-financial-holiday#readme",
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
     "@types/node": "^20.11.24",
     "axios": "^1.6.7",
